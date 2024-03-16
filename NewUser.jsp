@@ -39,7 +39,8 @@
 
 con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/(database name)","root","(your password)"); 
  
-    ps=con.prepareStatement("insert into NewUser values(?,?,?,?,?,?,?,?,?)"); 
+    ps=con.prepareStatement("insert into (name of the table) (name,password,phone,age,email) value(?,?,?,?,?,?,?,?,?)");
+ 
 
     ps.setString(1,name);
  
