@@ -26,10 +26,11 @@
 
    Class.forName("com.mysql.jdbc.Driver"); 
  
- con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/projects","root","271024");
+ con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/(database name)","root","(your password)");
+
  
 
-   ps=con.prepareStatement("select * from NewUser where username=? and password=?");
+   ps=con.prepareStatement("select * from (name of the table) where name=? and password=?");
  
   
    ps.setString(1,name);
@@ -45,7 +46,7 @@ if(rs.next())
    
 {
       
- response.sendRedirect("welcome.jsp");
+ response.sendRedirect("Welcome.html");
  
   }
    
